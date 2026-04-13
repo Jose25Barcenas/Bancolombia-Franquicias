@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: franquicias-api
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/franquicias
+    username: postgres
+    password: postgres
+    pool:
+      initial-size: 10
+      max-size: 20
+      max-idle-time: 30m
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+logging:
+  level:
+    root: INFO
+    com.bancolombia: DEBUG
